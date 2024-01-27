@@ -50,13 +50,13 @@ class Animals
   end
 end 
 
-class Dog > Animals
+class Dog < Animals
    def introduce
     puts "I'm a dog! My name is #{@name} and I #{@sound}"
    end
 end
 
-class Cat > Animals
+class Cat < Animals
   def introduce
     puts "I'm a cat! My name is #{@name} and I #{@sound}"
   end
