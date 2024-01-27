@@ -4,7 +4,7 @@ class Confection
   end 
 end
 
-class BananaCake > Confection
+class BananaCake < Confection
 end
 
 class Cupcakes < Confection
