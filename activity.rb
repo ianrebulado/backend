@@ -43,28 +43,21 @@ puts hp.final_amount
 
 
 # Polymorphism 
-class Book 
-  def initialize(amount, quantity, pages)
-    @amount = amount
-    @quantity = quantity
-    @pages = pages
+class Animals
+  def initialize(name, sound)
+    @name = name
+    @sound = sound
   end
+end 
+
+class Dog > Animals
+   def introduce
+    puts "I'm a dog! My name is #{@name} and I #{@sound}"
+   end
 end
 
-class HarryPotter < Book
-  attr_accessor :title, :author
-
-  def initialize(amount, quantity, pages, title, author)
-    super(amount, quantity, pages)
-    @title = title
-    @author = author
-  end
-
-  def display_info
-    puts "Title: #{@title}"
-    puts "Author: #{@author}"
-    puts "Amount: #{@amount}"
-    puts "Quantity: #{@quantity}"
-    puts "Pages: #{@pages}"
+class Cat > Animals
+  def introduce
+    puts "I'm a cat! My name is #{@name} and I #{@sound}"
   end
 end
