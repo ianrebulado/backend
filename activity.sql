@@ -8,7 +8,7 @@ location     text						NOT NULL
 );
 
 
-INSERT INTO students (id, first_name, middle_name, last_name, age, location)
+INSERT INTO students (id, first_name, last_name, age, location)
 VALUES 
 (1, 'Juan', 'Cruz', 18,'Manila'),
 (2, 'Anne', 'Wall', 20, 'Manila'),
@@ -18,7 +18,6 @@ VALUES
 (6, 'Finn', 'Lam', 25, 'Manila');
 
 UPDATE students
-
 SET first_name = 'Ivan', middle_name = 'Ingram', last_name = 'Howard', age = 25, location = 'Bulacan'
 WHERE id = 1;
 
