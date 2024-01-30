@@ -29,7 +29,7 @@ FROM students;
 
 SELECT *
 FROM students
-WHERE location = 'MANILA';
+WHERE location = 'Manila';
 
 SELECT AVG(age) 
 FROM students;
