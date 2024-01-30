@@ -23,3 +23,17 @@ WHERE id = 1;
 
 DELETE FROM students
 WHERE id = 6;
+
+SELECT COUNT(*)
+FROM students;
+
+SELECT *
+FROM students
+WHERE location = 'MANILA';
+
+SELECT AVG(age) 
+FROM students;
+
+SELECT * 
+FROM students 
+ORDER BY age DESC;
