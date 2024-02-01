@@ -5,10 +5,11 @@ def is_isogram(word)
   word.each_char do |char|
     if uniq_chars.include?(char)
       puts false
-    return
+      return
     else
-    uniq_chars.add(char)
+      uniq_chars.add(char)
     end
   end
+  
   puts true
 end
