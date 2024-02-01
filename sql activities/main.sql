@@ -1,3 +1,5 @@
+-- ACTIVITY 1
+
 CREATE TABLE students(
 id           integer                    PRIMARY KEY,
 first_name   character varying(100)     NOT NULL,
@@ -37,3 +39,44 @@ FROM students;
 SELECT * 
 FROM students 
 ORDER BY age DESC;
+
+
+-- ACTIVITY 2
+
+CREATE TABLE classrooms(
+id              integer     PRIMARY KEY,
+student_id      integer     NOT NULL,
+section         character varying(50) NOT NULL
+);
+
+INSERT INTO classrooms (id, student_id, section)
+VALUES
+(1, 1, "A"),
+(2, 2, "A"),
+(3, 3, "B"),
+(4, 4, "C"),
+(5, 5, "B"),
+(6, 6, "A"),
+(7, 7, "C"),
+(8, 8, "B"),
+(9, 9, "B"),
+(10, 10, "C");
+
+SELECT * FROM students;
+SELECT * FROM classrooms;
+
+SELECT * FROM students s
+JOIN classrooms c 
+ON s.id = c.student_id;
+
+SELECT * FROM students s
+LEFT JOIN classrooms c
+ON s.id = c.student_id;
+
+SELECT * FROM students s
+RIGHT JOIN classrooms c 
+ON s.id = c.student_id;
+
+SELECT * FROM students s
+FULL JOIN classrooms c
+ON s.id = c.student_id;
